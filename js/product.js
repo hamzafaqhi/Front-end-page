@@ -27,10 +27,10 @@ $(document).ready(function() {
         return false;
     });
 
-    $('span').click(function() {
+    $('.select-color').children('div').click(function() {
         let dot = this.className;
         $('.error-div').hide()
-        $('.' + dot).text('✔');
+        $('.' + dot).append(' <i class = "fa fa-check" > </i>');
         if (dot == "dot1") {
             $('#color').val('grey')
             $('.dot2').text('');

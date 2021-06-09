@@ -38,9 +38,9 @@
             <div class="detail">
                 <p class="select-txt text-left">Select Color</p>
                 <div class="select-color">
-                    <span class="dot1"></span>
-                    <span class="dot2"></span>
-                    <span class="dot3"></span>
+                    <div class="dot1" ></div>
+                    <div class="dot2" ></div>
+                    <div class="dot3" ></div>
                 </div>
                 <div class="error-div"><span class=" text-left">Please Select Color</span></div>
                 <div>
