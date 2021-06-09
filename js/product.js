@@ -14,12 +14,22 @@ $(document).ready(function() {
     plus.click(function(e) {
         e.preventDefault();
         var value = input.val();
-        value++;
+        if (value < 99) {
+            value++;
+        }
         input.val(value);
+
+
     })
+
+    $('.quantity__input').keydown(function() {
+        //code to not allow any changes to be made to input field
+        return false;
+    });
 
     $('span').click(function() {
         let dot = this.className;
+        $('.error-div').hide()
         $('.' + dot).text('✔');
         if (dot == "dot1") {
             $('#color').val('grey')
@@ -43,8 +53,7 @@ $(document).ready(function() {
         var quantity = $('.quantity__input').val();
         var color = $('#color').val();
         if (!color) {
-            $('.error-msg').show()
-            setTimeout(function() { $(".error-msg").hide(); }, 5000);
+            $('.error-div').show()
             return false
         }
         $.ajax({

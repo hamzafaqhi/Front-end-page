@@ -32,6 +32,7 @@ body {
     border-radius: 20px 20px 0 0;
     background-color: #fff;
     height: 50vh;
+    z-index: 1;
     /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); */
 }
 
@@ -151,17 +152,16 @@ button {
 
 .modal {
     background-image: url("../images/modal.svg");
-    background-position: top;
+    background-position: center center;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    background-size: inherit;
+    background-size: auto;
     display: none;
     /* Hidden by default */
     position: fixed;
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding-top: 150px;
     /* Location of the box */
     width: 100%;
     /* Full width */
@@ -180,9 +180,10 @@ button {
 .modal-content {
     text-align: center;
     margin: auto;
-    padding-top: 50px;
     width: 60%;
-    margin-right: 68px;
+    position: relative;
+    left: 2%;
+    top: 45%;
 }
 
 
@@ -207,7 +208,7 @@ button {
     color: #ffffff;
     border-radius: 8px;
     padding: 15px;
-    font-size: 16pt;
+    font-size: 15pt;
     font-weight: 500;
 }
 
@@ -222,6 +223,39 @@ button {
     color: #999B9F;
     font-size: 14pt;
     font-weight: 400;
+    margin: 0px;
+}
+
+@media screen and (min-width: 430px) {
+    .modal-content {
+        width: 51%;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .modal-content {
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .modal-content {
+        width: 44%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .modal-content {
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .modal-content {
+        width: 26%;
+        top: 48%;
+        left: 1%;
+    }
 }
 
 .error-msg {
@@ -229,4 +263,6 @@ button {
     font-size: 12pt;
     font-weight: 700;
     line-height: 22px;
+    margin-top: -20px;
+    padding-bottom: 10px;
 }

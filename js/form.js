@@ -6,22 +6,27 @@ $(document).ready(function() {
         address = $('#address').val();
         if (!name) {
             $('.name-error').show();
-            setTimeout(function() { $(".error-msg").hide(); }, 5000);
             return false
         }
         if (!phone) {
             $('.phone-error').show();
-            setTimeout(function() { $(".error-msg").hide(); }, 5000);
             return false
         }
         if (!email) {
             $('.email-error').show();
-            setTimeout(function() { $(".error-msg").hide(); }, 5000);
             return false
+        }
+
+        if (email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!regex.test(email)) {
+                $('.email-error').text("Please Enter Valid Email Address");
+                $('.email-error').show();
+                return false
+            }
         }
         if (!address) {
             $('.address-error').show();
-            setTimeout(function() { $(".error-msg").hide(); }, 5000);
             return false
         }
         $.ajax({
@@ -73,4 +78,22 @@ $(document).ready(function() {
         }
         modal.hide();
     }
+
+    $('#name').keydown(function() {
+        $('.name-error').hide();
+        return true;
+    })
+    $('#email').keydown(function() {
+        $('.email-error').hide();
+        return true;
+    })
+    $('#phone').keydown(function() {
+        $('.phone-error').hide();
+        return true;
+    })
+
+    $('#address').keydown(function() {
+        $('.address-error').hide();
+        return true;
+    })
 });

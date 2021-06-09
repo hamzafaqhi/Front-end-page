@@ -1,7 +1,7 @@
 <?php
 include('database.php');
 session_start();
-
+$_SESSION["totalPrice"] = NULL;
 $page = mysqli_real_escape_string($connection,$_POST['page']);
 
 if($page === "product") {

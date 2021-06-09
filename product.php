@@ -28,7 +28,7 @@
                     <div class="img-card" style="text-align: left;">
                         <div class="quantity">
                             <a href="#" class="quantity__minus"><span>-</span></a>
-                            <input name="quantity" type="text" class="quantity__input" value="1">
+                            <input name="quantity" type="text" class="quantity__input" maxlength="99" value="1">
                             <a href="#" class="quantity__plus"><span>+</span></a>
                         </div>
                     </div>
@@ -41,8 +41,9 @@
                     <span class="dot1"></span>
                     <span class="dot2"></span>
                     <span class="dot3"></span>
-                    <div><p class="error-msg text-left">Please Select Color</p></div>
                 </div>
+                <div class="error-div"><span class=" text-left">Please Select Color</span></div>
+                <div>
                 <p class="description text-left">Adopting the Hybrid Active Noise Cancellation Technology, the inward-facing and outward-facing microphones detect the out-of-ear and in-ear residual noise, and then the dynamic drivers generate accurate anti-noise signals.</p>
             </div>
             <input type="hidden" name="color" id="color" value="" >

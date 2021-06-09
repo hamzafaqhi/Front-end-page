@@ -1,4 +1,3 @@
-<?php include('server.php') ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,30 +22,30 @@
                     <label for="">Name</label>
                     <div class="input-div">
                         <i class="fa fa-user"></i>
-                        <input  name="name" id="name" type="text" value="<?php echo $username ?>" required autocomplete="off">
+                        <input  name="name" id="name" type="text" required autocomplete="off">
                     </div>
-                    <span><p class="text-left error-msg name-error" style="display:none">Please Enter Name</p></span>
+                    <div class="error-msg text-left name-error" style="display:none"> <span class="" > Please enter your name</span></div>
 
                     <label for="">Contact Number</label>
                     <div class="input-div">
                         <i class="fa fa-phone"></i>
-                        <input  name="phone" id="phone" type="tel" value = "<?php echo $phone ?> " required autocomplete="off">
+                        <input name="phone" id="phone" type="text"  required autocomplete="off">
                     </div>
-                    <span><p class="text-left error-msg phone-error" style="display:none">Please Select Phone</p></span>
+                    <span><p class="text-left error-msg phone-error" style="display:none">Please enter your contact number</p></span>
 
                     <label for="">Email</label>
                     <div class="input-div">
                         <i class="fa fa-envelope"></i>
-                        <input  name="email" id="email" type="email" autocomplete="off"  value="<?php echo $email ?>"  required> 
+                        <input  name="email" id="email" type="email" autocomplete="off" required> 
                     </div>
-                    <span><p class="text-left error-msg email-error" style="display:none">Please Select Email</p></span>
+                    <span><p class="text-left error-msg email-error" style="display:none">Please enter your email</p></span>
 
                     <label for="">Address</label>
                     <div class="input-div">
                         <i class="fa fa-map-marker"></i>
                         <input  name="address" id="address" type="address" required autocomplete="off">
                     </div>
-                    <div><p class="text-left error-msg address-error" style="display:none">Please Select Address</p></div>
+                    <div><p class="text-left error-msg address-error" style="display:none">Please enter your address</p></div>
                     <div class="price">
                         <div class="selection">
                             <h3 class="price-tag">Total <small>(incl.VAT)</small></h3>
