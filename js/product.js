@@ -22,15 +22,14 @@ $(document).ready(function() {
 
     })
 
-    $('.quantity__input').keydown(function() {
-        //code to not allow any changes to be made to input field
-        return false;
-    });
+
 
     $('.select-color').children('div').click(function() {
         let dot = this.className;
         $('.error-div').hide()
-        $('.' + dot).append(' <i class = "fa fa-check" > </i>');
+        if (!$('.' + dot).html()) {
+            $('.' + dot).html(' <i class = "fa fa-check" > </i>');
+        }
         if (dot == "dot1") {
             $('#color').val('grey')
             $('.dot2').text('');

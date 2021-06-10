@@ -1,5 +1,7 @@
 $(document).ready(function() {
     $('#submitBtn').click(function() {
+        $('.loader').show()
+        $('.card-info').addClass('blur');
         name = $('#name').val();
         phone = $('#phone').val();
         email = $('#email').val();
@@ -29,6 +31,7 @@ $(document).ready(function() {
             $('.address-error').show();
             return false
         }
+        $("#submitBtn").prop("disabled", true);
         $.ajax({
             url: "save.php",
             type: "POST",
@@ -43,8 +46,10 @@ $(document).ready(function() {
             success: function(dataResult) {
                 var dataResult = JSON.parse(dataResult);
                 if (dataResult.status == 200) {
+                    $('.loader').hide()
+                    $('.card-info').removeClass('blur');
                     $(".order-form").trigger('reset');
-                    $("#submitBtn").removeAttr("disabled");
+                    $("#submitBtn").prop("disabled", false);
                     $('#myModal').show()
                 } else {
                     alert('Error while creating your order!')

@@ -28,7 +28,7 @@
                     <div class="img-card" style="text-align: left;">
                         <div class="quantity">
                             <a href="#" class="quantity__minus"><span>-</span></a>
-                            <input name="quantity" type="text" class="quantity__input" maxlength="99" value="1">
+                            <input name="quantity" type="text" class="quantity__input" maxlength="99" value="1" readonly>
                             <a href="#" class="quantity__plus"><span>+</span></a>
                         </div>
                     </div>

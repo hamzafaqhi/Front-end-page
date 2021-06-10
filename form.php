@@ -1,3 +1,4 @@
+<?php session_start(); include('server.php'); header("Cache-Control: no-cache, must-revalidate");  ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,6 +12,8 @@
     <link rel="stylesheet" href="css/form.css">
     </head>
     <body>
+        <div class="loader">
+        </div>
         <main>
             <div class="mx-4 form-img">
                 <p class="heading">Huawei FreeBuds 4i</p>
@@ -52,7 +55,7 @@
                         </div>
                         <div class="selection">
                             <div class="img-card" style="text-align: right;">
-                                <p class="total-price"><?php session_start(); echo 'Rs. ' . number_format($_SESSION["totalPrice"]);?> </p>
+                                <p class="total-price"><?php echo 'Rs. ' . number_format($totalPrice);?> </p>
                             </div>
                         </div>
                     </div>

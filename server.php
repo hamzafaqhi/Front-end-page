@@ -1,18 +1,7 @@
 <?php
 // initializing variables
-$username = "";
-$email    = "";
-$phone    = "";
+$totalPrice = 0;
 
-if(!empty($_GET["phone"])) {
-    $phone = $_GET["phone"];
+if(!empty($_SESSION["totalPrice"])) {
+    $totalPrice = $_SESSION["totalPrice"];
 }
-
-if(!empty($_GET["first_name"]) || !empty($_GET["last_name"])) {
-    $username = $_GET["first_name"].' '.$_GET["last_name"];
-}
-
-if(!empty($_GET["email"])) {
-    $email = $_GET["email"];
-}
-
