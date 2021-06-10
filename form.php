@@ -52,7 +52,7 @@
                     <div><p class="text-left error-msg address-error" style="display:none">Please enter your address</p></div>
                     <div class="price">
                         <div class="selection">
-                            <h3 class="price-tag">Total <small>(incl.VAT)</small></h3>
+                            <h3 class="price-tag">Total</h3>
                         </div>
                         <div class="selection">
                             <div class="img-card" style="text-align: right;">
@@ -74,7 +74,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <p class="modal-heading" >Order Successful! </p>
-            <p class="modal-description">Your order have been places successfully, Our customer support member will contact you shortly</p><br>
+            <p class="modal-description">Your order has been placed successfully. Our customer support member will contact you soon</p><br>
             <button class="modal-btn" id="myBtn" type="button">Continue to Home </button> 
         </div>
     </div>

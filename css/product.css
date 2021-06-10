@@ -145,8 +145,10 @@ body {
     width: 30pt;
     left: 20px;
     color: white;
-    background-color: #9DA5A5;
+    border-style: solid;
+    background-color: red;
     border-radius: 50%;
+    border-color: black;
     display: inline-block;
     text-align: center;
     line-height: 38px;
@@ -158,8 +160,10 @@ body {
     width: 30pt;
     color: black;
     left: 60px;
-    background-color: #F2F2F2;
+    border-style: solid;
+    background-color: white;
     border-radius: 50%;
+    border-color: black;
     display: inline-block;
     margin-left: 15px;
     text-align: center;
@@ -172,8 +176,10 @@ body {
     width: 30pt;
     color: white;
     left: 120px;
+    border-style: solid;
     background-color: #363636;
     border-radius: 50%;
+    border-color: black;
     display: inline-block;
     margin-left: 15px;
     text-align: center;

@@ -44,7 +44,7 @@
                 </div>
                 <div class="error-div"><span class=" text-left">Please Select Color</span></div>
                 <div>
-                <p class="description text-left">Adopting the Hybrid Active Noise Cancellation Technology, the inward-facing and outward-facing microphones detect the out-of-ear and in-ear residual noise, and then the dynamic drivers generate accurate anti-noise signals.</p>
+                <p class="description text-left">High Quality Sound | Active Noise Cancellation | 10 Hours of Continuous Playback. <br> Crystal clear sound that will blow you away. Rich instrumental harmonies, clear vocals, punchy bass, and finely balanced sound.</p>
             </div>
             <input type="hidden" name="color" id="color" value="" >
             <div class="pre-order">
