@@ -22,8 +22,6 @@ $(document).ready(function() {
 
     })
 
-
-
     $('.select-color').children('div').click(function() {
         let dot = this.className;
         $('.error-div').hide()
@@ -67,7 +65,9 @@ $(document).ready(function() {
             success: function(dataResult) {
                 var dataResult = JSON.parse(dataResult);
                 if (dataResult.status == 200) {
-                    window.location.href = 'form.php';
+                    var host = window.location.pathname.split('/');
+                    let url = window.location.origin + '/' + host[1] + '/form.php?totalPrice=' + dataResult.totalPrice + '&color=' + dataResult.color + '&quantity=' + dataResult.quantity;
+                    window.location.href = url;
                 } else {
                     return false
                 }

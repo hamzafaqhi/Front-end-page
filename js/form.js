@@ -1,11 +1,13 @@
 $(document).ready(function() {
     $('#submitBtn').click(function() {
-        $('.loader').show()
-        $('.card-info').addClass('blur');
+
         name = $('#name').val();
         phone = $('#phone').val();
         email = $('#email').val();
         address = $('#address').val();
+        color = $('#color').val();
+        quantity = $('#quantity').val();
+        totalPrice = $('#totalPrice').val();
         if (!name) {
             $('.name-error').show();
             return false
@@ -31,7 +33,17 @@ $(document).ready(function() {
             $('.address-error').show();
             return false
         }
-        $("#submitBtn").prop("disabled", true);
+
+        if (totalPrice == 0 || !color || quantity === 0) {
+            $('.price-error').show();
+            return false;
+        }
+        if (phone && name && address && email && totalPrice > 0) {
+            $('.loader').show();
+            $('.card-info').addClass('blur');
+            $("#submitBtn").prop("disabled", true);
+        }
+
         $.ajax({
             url: "save.php",
             type: "POST",
@@ -40,6 +52,9 @@ $(document).ready(function() {
                 phone: phone,
                 email: email,
                 address: address,
+                totalPrice: totalPrice,
+                color: color,
+                quantity: quantity,
                 page: 'form',
             },
             cache: false,
@@ -52,6 +67,8 @@ $(document).ready(function() {
                     $("#submitBtn").prop("disabled", false);
                     $('#myModal').show()
                 } else {
+                    $('.loader').hide()
+                    $('.card-info').removeClass('blur');
                     alert('Error while creating your order!')
                 }
 
@@ -86,19 +103,25 @@ $(document).ready(function() {
 
     $('#name').keydown(function() {
         $('.name-error').hide();
+        $('.price-error').hide();
         return true;
     })
     $('#email').keydown(function() {
         $('.email-error').hide();
+        $('.price-error').hide();
+
         return true;
     })
     $('#phone').keydown(function() {
         $('.phone-error').hide();
+        $('.price-error').hide();
+
         return true;
     })
 
     $('#address').keydown(function() {
         $('.address-error').hide();
+        $('.price-error').hide();
         return true;
     })
 });

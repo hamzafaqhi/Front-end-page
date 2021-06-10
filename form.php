@@ -1,4 +1,4 @@
-<?php session_start(); include('server.php'); header("Cache-Control: no-cache, must-revalidate");  ?>
+<?php include('server.php'); header("Cache-Control: no-cache, must-revalidate");  ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +22,7 @@
                 <p class="card-heading text-left">Pre Order Form</p>
                 <p class="small-text text-left">Please fill the information below to order</p>
                 <form class="order-form">
+                    <div><p class="text-left error-msg price-error" style="display:none">Please Select Product</p></div>
                     <label for="">Name</label>
                     <div class="input-div">
                         <i class="fa fa-user"></i>
@@ -32,7 +33,7 @@
                     <label for="">Contact Number</label>
                     <div class="input-div">
                         <i class="fa fa-phone"></i>
-                        <input name="phone" id="phone" type="text"  required autocomplete="off">
+                        <input name="phone" id="phone" type="number" required autocomplete="off">
                     </div>
                     <span><p class="text-left error-msg phone-error" style="display:none">Please enter your contact number</p></span>
 
@@ -58,6 +59,9 @@
                                 <p class="total-price"><?php echo 'Rs. ' . number_format($totalPrice);?> </p>
                             </div>
                         </div>
+                        <input type="hidden" name="totalPrice" id="totalPrice" value="<?php echo $totalPrice; ?>">
+                        <input type="hidden" name="color" id="color" value="<?php echo $color; ?>">
+                        <input type="hidden" name="quantity" id="quantity" value="<?php echo $quantity; ?>">
                     </div>
                     <div class="pre-order">
                         <button class="pre-order-btn" type="button" id="submitBtn" >Place Order </button> 

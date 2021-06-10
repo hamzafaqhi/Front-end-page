@@ -1,7 +1,7 @@
 <?php
 include('database.php');
 session_start();
-$_SESSION["totalPrice"] = NULL;
+$userId = NULL;
 $page = mysqli_real_escape_string($connection,$_POST['page']);
 
 if($page === "product") {
@@ -10,10 +10,8 @@ if($page === "product") {
     $priceQuery = "SELECT price FROM products WHERE id = '1'";
     $price = $connection->query($priceQuery);
     $price = $price->fetch_assoc();
-    $_SESSION["color"] = $color;
-    $_SESSION["quantity"] = $quantity;
-    $_SESSION["totalPrice"] = $quantity * $price['price'];
-    echo json_encode(array("status"=>200));
+    $totalPrice = $quantity * $price['price'];
+    echo json_encode(array("status"=>200,"totalPrice" => $totalPrice,"color" => $color,"quantity" => $quantity));
 }
 
 else {
@@ -21,9 +19,9 @@ else {
     $email= mysqli_real_escape_string($connection,$_POST['email']);
     $phone= mysqli_real_escape_string($connection,$_POST['phone']);
     $address= mysqli_real_escape_string($connection,$_POST['address']);
-    $quantity =  $_SESSION["quantity"];
-    $color =  $_SESSION["color"];
-    $totalPrice =  $_SESSION["totalPrice"];
+    $quantity = mysqli_real_escape_string($connection,$_POST['quantity']);
+    $color = mysqli_real_escape_string($connection,$_POST['color']);
+    $totalPrice = mysqli_real_escape_string($connection,$_POST['totalPrice']);;
     $sql = "INSERT INTO `users`( `name`, `email`, `phone`) 
     VALUES ('$name','$email','$phone')";
     try {

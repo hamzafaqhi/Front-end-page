@@ -1,7 +1,17 @@
 <?php
 // initializing variables
-$totalPrice = 0;
+$totalPrice;
+$color;
+$quantity;
 
-if(!empty($_SESSION["totalPrice"])) {
-    $totalPrice = $_SESSION["totalPrice"];
+if(!empty($_GET["totalPrice"])) {
+    $totalPrice = $_GET["totalPrice"];
+}
+
+if(!empty($_GET["quantity"])) {
+    $quantity =$_GET["quantity"];
+}
+
+if(!empty($_GET["color"])) {
+    $color =$_GET["color"];
 }
