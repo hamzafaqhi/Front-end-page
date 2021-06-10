@@ -14,9 +14,38 @@
 
 <body>
     <main>
-        <div class="mx-4 airbuds-img">
-            <p class="heading">Huawei FreeBuds 4i</p>
+        
+        <!-- slider -->
+        <div class="slideshow-container">
+        <div class="heading">Huawei FreeBuds 4i</div>
+            <div class="mySlides fade" style="display: block;" id="slider1" >
+                <img src="./images/product.png"  style="width:100%" onclick="currentSlide(2)">
+              
+            </div>
+    
+        
+            <div class="mySlides fade" id="slider2">
+                <img src="./images/productred.png" style="width:100%" onclick="currentSlide(3)" >
+            </div>
+        
+            <div class="mySlides fade" id="slider3">
+                <img src="./images/productwhite.png" style="width:100%" onclick="currentSlide(4)">
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <!-- slidr -->
+        <!-- <div class="mx-4 airbuds-img" id="airbuds-img">
+            <p class="heading">Huawei FreeBuds 4i</p>
+        </div> -->
         <div class="card-info">
             <p class="card-heading text-left">Huawei FreeBuds 4i</p>
             <div class="grid-container-2">
@@ -44,7 +73,7 @@
                 </div>
                 <div class="error-div"><span class=" text-left">Please Select Color</span></div>
                 <div>
-                <p class="description text-left">High Quality Sound | Active Noise Cancellation | 10 Hours of Continuous Playback. <br> Crystal clear sound that will blow you away. Rich instrumental harmonies, clear vocals, punchy bass, and finely balanced sound.</p>
+                <p class="description text-left"><strong>High Quality Sound | Active Noise Cancellation | 10 Hours of Continuous Playback.</strong> <br> Crystal clear sound that will blow you away. Rich instrumental harmonies, clear vocals, punchy bass, and finely balanced sound.</p>
             </div>
             <input type="hidden" name="color" id="color" value="" >
             <div class="pre-order">
