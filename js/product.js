@@ -66,8 +66,8 @@ $(document).ready(function() {
             success: function(dataResult) {
                 var dataResult = JSON.parse(dataResult);
                 if (dataResult.status == 200) {
-                    var host = window.location.pathname.split('/');
-                    let url = window.location.origin + '/' + host[1] + '/form.php?totalPrice=' + dataResult.totalPrice + '&color=' + dataResult.color + '&quantity=' + dataResult.quantity;
+                    let url = window.location.origin + '/form.php?totalPrice=' + dataResult.totalPrice + '&color=' + dataResult.color + '&quantity=' + dataResult.quantity;
+
                     window.location.href = url;
                 } else {
                     return false
