@@ -67,12 +67,14 @@
             <div class="detail">
                 <p class="select-txt text-left">Select Color</p>
                 <div class="select-color">
-                    <div class="dot1" ></div>
-                    <div class="dot2" ></div>
-                    <div class="dot3" ></div>
+                    <div class="dot1" onclick="currentSlide(2)" ></div>
+                    <div class="dot2" onclick="currentSlide(3)"></div>
+                    <div class="dot3" onclick="currentSlide(1)"></div>
                 </div>
                 <div class="error-div"><span class=" text-left">Please Select Color</span></div>
                 <div>
+                <p class="free-description text-left"><strong> <em> Pre-order now and get a Bluetooth Speaker & Huawei Music 3-month Subscription FREE!
+                    Position = Before High quality Sound</em></strong></p>
                 <p class="description text-left"><strong>High Quality Sound | Active Noise Cancellation | 10 Hours of Continuous Playback.</strong> <br> Crystal clear sound that will blow you away. Rich instrumental harmonies, clear vocals, punchy bass, and finely balanced sound.</p>
             </div>
             <input type="hidden" name="color" id="color" value="" >

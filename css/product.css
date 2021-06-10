@@ -17,7 +17,7 @@ body {
     text-align: center;
     font-size: 18pt;
     font-weight: 700;
-    color: black;
+    color: #1d2733;
     align-items: center;
     padding-top: 20px;
 }
@@ -26,7 +26,7 @@ body {
     text-align: center;
     font-size: 24pt;
     font-weight: 700;
-    color: black;
+    color: #1d2733;
     margin-bottom: 0px;
 }
 
@@ -43,7 +43,7 @@ body {
 .grid-container-2 {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 60% 40%;
 }
 
 .lead {
@@ -147,7 +147,7 @@ body {
     border-style: solid;
     background-color: red;
     border-radius: 50%;
-    border-color: black;
+    border-color: #1d2733;
     display: inline-block;
     text-align: center;
     line-height: 38px;
@@ -157,12 +157,12 @@ body {
 .dot2 {
     height: 30pt;
     width: 30pt;
-    color: black;
+    color: #1d2733;
     left: 60px;
     border-style: solid;
     background-color: white;
     border-radius: 50%;
-    border-color: black;
+    border-color: #1d2733;
     display: inline-block;
     margin-left: 15px;
     text-align: center;
@@ -178,7 +178,7 @@ body {
     border-style: solid;
     background-color: #363636;
     border-radius: 50%;
-    border-color: black;
+    border-color: #1d2733;
     display: inline-block;
     margin-left: 15px;
     text-align: center;
@@ -191,7 +191,6 @@ body {
     font-size: 12pt;
     font-weight: 400;
     line-height: 22px;
-    padding-top: 65px;
 }
 
 .pre-order-btn {
@@ -279,7 +278,7 @@ img {
 }
 
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a #1d2733 background color with a little bit see-through */
 
 .prev:hover,
 .next:hover {
@@ -388,4 +387,16 @@ strong {
     .mySlides {
         height: 60vh !important;
     }
+}
+
+.free-description {
+    color: #999B9F;
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 22px;
+    padding-top: 65px;
+}
+
+.text-left {
+    text-align: left;
 }
