@@ -17,7 +17,7 @@
         
         <!-- slider -->
         <div class="slideshow-container">
-        <div class="heading">Huawei FreeBuds 4i</div>
+        <div class="heading">FreeBuds 4i</div>
             <div class="mySlides fade" style="display: block;" id="slider1" >
                 <img src="./images/product.png"  style="width:100%" onclick="currentSlide(2)">
               
@@ -47,10 +47,10 @@
             <p class="heading">Huawei FreeBuds 4i</p>
         </div> -->
         <div class="card-info">
-            <p class="card-heading text-left">Huawei FreeBuds 4i</p>
+            <p class="card-heading text-left">FreeBuds 4i</p>
             <div class="grid-container-2">
                 <div class="selection">
-                    <h3 class="price-tag">Rs. 16,499</h3>
+                    <h3 class="price-tag">Rs. xx,xxxx</h3>
                     <p class="small-txt text-left">Pre Order Only - Delivery in 7 days</p>
                 </div>
                 <div class="selection">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="error-div"><span class=" text-left">Please Select Color</span></div>
                 <div>
-                <p class="free-description text-left"><strong> <em> Pre-order now and get a Bluetooth Speaker & Huawei Music 3-month Subscription FREE!</em></strong></p>
+                <p class="free-description text-left"><strong> <em> Pre-order now and get a Bluetooth Speaker & Music 3-month Subscription FREE!</em></strong></p>
                 <p class="description text-left"><strong>High Quality Sound | Active Noise Cancellation | 10 Hours of Continuous Playback.</strong><br><br> Crystal clear sound that will blow you away. Rich instrumental harmonies, clear vocals, punchy bass, and finely balanced sound.</p>
             </div>
             <input type="hidden" name="color" id="color" value="" >

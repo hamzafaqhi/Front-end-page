@@ -4,7 +4,7 @@
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Golootlo"> 
+    <meta name="author" content="Hamza Faqhi"> 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/form.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
         </div>
         <main>
             <div class="mx-4 form-img">
-                <p class="heading">Huawei FreeBuds 4i</p>
+                <p class="heading">FreeBuds 4i</p>
             </div>
             <div class="card-info">
                 <p class="card-heading text-left">Pre Order Form</p>
